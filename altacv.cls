@@ -144,6 +144,7 @@
 \newcommand{\homepage}[1]{\printinfo{\homepagesymbol}{#1}}
 \newcommand{\twitter}[1]{\printinfo{\twittersymbol}{#1}}
 \newcommand{\linkedin}[1]{\printinfo{\linkedinsymbol}{#1}}
+\newcommand{\age}[1]{\printinfo{\faSunO}{#1}}
 \newcommand{\github}[1]{\printinfo{\githubsymbol}{#1}}
 \newcommand{\orcid}[1]{\printinfo{\orcidsymbol}{#1}}
 \newcommand{\location}[1]{\printinfo{\locationsymbol}{#1}}
@@ -171,6 +172,10 @@
   \endgroup\medskip
 }
 
+\newcommand{\halfline}[1]{%
+    \makebox[0.5\linewidth][l]{#1}
+}
+
 \renewenvironment{quote}{\color{accent}\itshape\large}{\par}
 
 \newcommand{\cvsection}[2][]{%
@@ -185,17 +190,24 @@
   {\color{emphasis}\large\bfseries{#1}\par}\medskip
 }
 
+\newcommand{\cvcalendar}[1]{%
+ \small\hspace{5em}#1\hspace{0.5em}\faCalendar
+}
+
 % v1.1.4: fixes inconsistent font size
 \newcommand{\cvevent}[4]{%
-  {\large\color{emphasis}#1\par}
-  \smallskip\normalsize
+  \makebox[0.5\linewidth][l]{\large\color{emphasis}#1}
+  \normalsize
+  \ifstrequal{#3}{}{}{\hfill\small{#3}\hspace{0.5em}\faCalendar}%
+  \break
   \ifstrequal{#2}{}{}{
   \textbf{\color{accent}#2}\par
   \smallskip}
-  \ifstrequal{#3}{}{}{{\small\makebox[0.5\linewidth][l]{\faCalendar\hspace{0.5em}#3}}}%
-  \ifstrequal{#4}{}{}{{\small\makebox[0.5\linewidth][l]{\faMapMarker\hspace{0.5em}#4}}}\par
-  \medskip\normalsize
+  \ifstrequal{#4}{}{}{{\small\halfline{\faMapMarker\hspace{0.5em}#4}}}\par
+  \smallskip\normalsize
 }
+
+
 
 \newcommand{\cvachievement}[3]{%
   \begin{tabularx}{\linewidth}{@{}p{2em} @{\hspace{1ex}} >{\raggedright\arraybackslash}X@{}}
@@ -206,6 +218,10 @@
 }
 
 \newcommand{\cvtag}[1]{%
+  \tikz[baseline]\node[anchor=base,draw=body!30,rounded corners,inner xsep=1ex,inner ysep =0.75ex,text height=1.5ex,text depth=.25ex]{\small{#1}};
+}
+
+\newcommand{\skilltag[1]{%
   \tikz[baseline]\node[anchor=base,draw=body!30,rounded corners,inner xsep=1ex,inner ysep =0.75ex,text height=1.5ex,text depth=.25ex]{#1};
 }
 

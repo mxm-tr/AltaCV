@@ -19,7 +19,7 @@
 % \documentclass[10pt,a4paper,academicons]{altacv}
 
 %% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
-% \documentclass[10pt,a4paper,normalphoto]{altacv}
+%\documentclass[10pt,a4paper,normalphoto]{altacv}
 
 \documentclass[10pt,a4paper,ragged2e]{altacv}
 
@@ -28,7 +28,7 @@
 %% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
 
 % Change the page layout if you need to
-\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+\geometry{left=0.8cm,right=7.8cm,marginparwidth=6.2cm,marginparsep=0.8cm,top=1cm,bottom=0cm}
 
 % Change the font if you want to, depending on whether
 % you're using pdflatex or xelatex/lualatex
@@ -60,20 +60,21 @@
 \addbibresource{sample.bib}
 
 \begin{document}
-\name{Marissa Mayer}
-\tagline{Business Woman \& Proud Geek}
+\name{Maxime\hspace{0.56em}Hubert}
+\tagline{Computer Science Engineer in the Cloud}
 % Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
-\photo{2.5cm}{mmayer-wikipedia-cc-by-2_0}
+%\photo{2.5cm}{mmayer-wikipedia-cc-by-2_0}
 \personalinfo{%
   % Not all of these are required!
   % You can add your own with \printinfo{symbol}{detail}
-  \email{mmayer@yahoo-inc.com}
+  \email{maxime.hubert@outlook.com}
 %   \phone{000-00-0000}
-  \mailaddress{Address, Street, 00000 County}
-  \location{Sunnyvale, CA}
-  \homepage{marissamayr.tumblr.com/}
-  \twitter{@marissamayer}
-  \linkedin{linkedin.com/in/marissamayer}
+  \mailaddress{7566 8th street NW}
+  \location{Washington, DC}
+%  \homepage{marissamayr.tumblr.com/}
+%  \twitter{@marissamayer}
+  \linkedin{www.linkedin.com/in/maximehubert}
+  \age{2+ years exp.}
 %   \github{github.com/mmayer} % I'm just making this up though.
 %   \orcid{orcid.org/0000-0000-0000-0000} % Obviously making this up too. If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
 }
@@ -90,77 +91,86 @@
 %% You can always just use \marginpar{...} if you do
 %% not need to align the top of the contents to any
 %% \cvsection title in the "main" bar.
-\cvsection[mmayer-p1sidebar]{Experience}
+\cvsection[sidebar_page1]{Experience}
 
-\cvevent{President \& CEO}{Yahoo!}{July 2012 -- Ongoing}{Sunnyvale, CA}
+
+\cvevent{Research Engineer (Since April 2017)}{National Institute of Standards and Technology (NIST)}{}{Washington DC area, USA}
+
+\cvtag{IARPA}\cvtag{DIVA}\cvtag{Video processing} \hfill
+\cvcalendar{2018 -- Now }\hspace{5em}\vspace{0.3em}\vspace{0.3em}\break
+Part of a team that designed an evaluation process for Activity Detection algorithms on video footage for the IARPA Deep Intermodal Video Analytics program.
 \begin{itemize}
-\item Led the \$5 billion acquisition of the company with Verizon -- the entity which believed most in the immense value Yahoo!\ has created
-\item Acquired Tumblr for \$1.1 billion and moved the company's blog there
-\item Built Yahoo's mobile, video and social businesses from nothing in 2011 to \$1.6 billion in GAAP revenue in 2015
-\item Tripled the company's mobile base to over 600 million monthly active users and generated over \$1 billion of mobile advertising revenue last year
+
+\item Allowed the Continuous Delivery and validation of video processing systems using IaaS/PaaS technologies on a GPU-accelerated cluster. Performed evaluation of the performance of video processing algorithms in an automated manner using jobs scheduling and resources abstraction.
+\item 10+ GPU-ready systems over 100+ hours of video sets were evaluated and monitored.
+\item Speaker in a talk about this work at the Open Infrastructure Summit 2019 in Denver, CO.
 \end{itemize}
+\textbf{\color{accent}Tags:} Openstack, GPU cluster, Job scheduling, Data Science, CD, Infrastructure as Code.
 
 \divider
 
-\cvevent{Vice President of Location \& Services}{Google}{Oct 2010 -- July 2012}{Palo Alto, CA}
+\cvtag{DARPA} \cvtag{D3M} \cvtag{MLaaS} \hfill \cvcalendar{2017 -- 2018} \hspace{5em}\vspace{0.3em}\vspace{0.3em}\break
+Part of a team that developed, integrated, and supported an evaluation framework for Machine Learning algorithms on a cluster for the DARPA Data Driven Discovery of Models program.
 \begin{itemize}
-\item Position Google Maps as the world leader in mobile apps and navigation
-\item Oversaw 1000+ engineers and product managers working on Google Maps, Google Places and Google Earth
+\item Allowed a Continuous Delivery and validation of ML systems, as well as the automation of performance evaluation using jobs definitions and scheduling mechanisms.
+\item 20+ ML systems over 70+ data sets were evaluated and monitored. This work included the deployment of web applications for human-assisted ML.
 \end{itemize}
+\textbf{\color{accent}Tags:} Kubernetes, ELK, Openstack, Docker, Python, Machine Learning, Job scheduling, Data science, CD.
 
 \divider
 
-\cvevent{Vice President of Search Products \& UX}{Google}{2005 --  2010}{Palo Alto, CA}
+\cvtag{IARPA}\cvtag{MATERIAL}\cvtag{Machine Translation} \hfill
+\cvcalendar{2017 -- Now }\hspace{5em}\vspace{0.3em}\vspace{0.3em}\break
+Maintained data sets and code for the IARPA Machine Translation for English Retrieval of Information in Any Language (MATERIAL) program.
+
+\begin{itemize}
+\item Implemented metrics calculators, data management scripts, and interactive analyzers to read the performance of MT information retrieval systems.
+\item Worked towards standardizing, version-controlling, and documenting the different steps of the evaluation pipeline: from the MT data sets collection to the calculation of MT systems performance metrics.
+\end{itemize}
+\textbf{\color{accent}Tags:} Data analysis, Data standardization, Python, Numpy, Pandas, Jupyter.
 
 \divider
 
-\cvevent{Product Manager \& UI Lead}{Google}{Oct 2001 -- July 2005}{Palo Alto, CA}
-
+\cvevent{ Internship: Network Support Technician (Summer 2016)}{ Crown Holdings }{}{Wantage Oxfordshire, UK}
+\cvtag{Network support}\cvtag{WAN}\vspace{0.3em}\break
+\begin{small}
+Part of a team of network technicians that provided support, troubleshooting and maintenance on an international company network.
 \begin{itemize}
-\item Appointed by the founder Larry Page in 2001 to lead the Product Management and User Interaction teams
-\item Optimized Google's homepage and A/B tested every minor detail to increase usability (incl.~spacing between words, color schemes and pixel-by-pixel element alignment)
+ \item Provided users with remote assistance.
+ 
+ \item Worked on updating the process to connect industrial monitors to the network by redacting configuration procedures.
 \end{itemize}
+\textbf{\color{accent}Tags:} WAN, Network, Support.
+\end{small}
 
-% \divider
+\divider
 
-% \cvevent{Product Engineer}{Google}{23 June 1999 -- 2001}{Palo Alto, CA}
+\textbf{\large{University projects:}}
 
-% \begin{itemize}
-% \item Joined the company as employe \#20 and female employee \#1
-% \item Developed targeted advertisement in order to use user's search queries and show them related ads
-% \end{itemize}
+\smallskip
+\small\textbf{Ministry of Defense, France}\hfill\cvcalendar{2017 -- 6 months}\hspace{5em}
 
-\cvsection{A Day of My Life}
+\small{Part of a team that prototyped an embedded solution to interact with flash memory.}
+\newline \smallskip
+\textbf{L'Oréal \& CRAN, France}\hfill\cvcalendar{2016 -- 2 months}\hspace{5em}
 
-% Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
-% \wheelchart{outer radius}{inner radius}{
-% comma-separated list of value/text width/color/detail}
-% Some ad-hoc tweaking to adjust the labels so that they don't overlap
-\wheelchart{1.5cm}{0.5cm}{%
-  10/10em/accent!30/Sleeping \& dreaming about work,
-  25/9em/accent!60/Public resolving issues with Yahoo!\ investors,
-  5/13em/accent!10/\footnotesize\\[1ex]New York \& San Francisco Ballet Jawbone board member,
-  20/15em/accent!40/Spending time with family,
-  5/8em/accent!20/\footnotesize Business development for Yahoo!\ after the Verizon acquisition,
-  30/9em/accent/Showing Yahoo!\ employees that their work has meaning,
-  5/8em/accent!20/Baking cupcakes
-}
+\small{Studied the feasibility of an AI algorithm performing image classification.}
 
 \clearpage
 
-\cvsection[page2sidebar]{Publications}
+%\cvsection[page2sidebar]{Publications}
 
-\nocite{*}
+%\nocite{*}
 
-\printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
+%\printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
 
-\divider
+%\divider
 
-\printbibliography[heading=pubtype,title={\printinfo{\faFileTextO}{Journal Articles}}, type=article]
+%\printbibliography[heading=pubtype,title={\printinfo{\faFileTextO}{Journal Articles}}, type=article]
 
-\divider
+%\divider
 
-\printbibliography[heading=pubtype,title={\printinfo{\faGroup}{Conference Proceedings}},type=inproceedings]
+%\printbibliography[heading=pubtype,title={\printinfo{\faGroup}{Conference Proceedings}},type=inproceedings]
 
 %% If the NEXT page doesn't start with a \cvsection but you'd
 %% still like to add a sidebar, then use this command on THIS
